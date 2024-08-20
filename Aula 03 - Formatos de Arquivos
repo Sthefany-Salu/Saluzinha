@@ -2,12 +2,14 @@ Aula 03 - Formatos de Arquivos
 
 1) As linguagens da programação escolhidas são: Phyton, JavaScript e Java
 1.1) O Python é uma linguagem fácil de aprender, com sintaxe clara e versátil, usada em ciência de dados, automação e desenvolvimento web, enquanto o JavaScript posssui a linguagem principal para criar interatividade em páginas web e funciona tanto no navegador quanto no servidor com Node.js., já o Java tem uma linguagem robusta e orientada a objetos, usada para construir aplicações corporativas e móveis (Android), que é compilada para bytecode e executada na Java Virtual Machine (JVM).
-a.1) Código mínimo Phython: print("Olá, mundo!")
-a.2) Código mínimo JavaScript: console.log("Olá, Mundo!")
+
+Site utilizado: https://www.mycompiler.io/pt
+a.1) Código mínimo Phython: print("Olá, Sthefany Salú!")
+a.2) Código mínimo JavaScript: console.log("Olá, Sthefany Salú!")
 a.3) Código mínimo Java: public class OlaMundo {
     public static void main(String[] args) {
-        System.out.println("Olá, Mundo!");
+        System.out.println("Olá, Sthefany Salú!");
     }
 }
 
-b.1) https://github.com/Sthefany-Salu/Saluzinha/blob/main/Execu%C3%A7%C3%A3o%20Python.PNG
+b.1) 
