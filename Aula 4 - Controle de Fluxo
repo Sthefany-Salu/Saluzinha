@@ -1,0 +1,9 @@
+1)a) Estrutra de repetição: contador = 0
+while contador < 21:
+    print(contador)
+    contador += 1
+
+b) x = 10
+if x > 7:
+    print("x é maior que 7")
+
