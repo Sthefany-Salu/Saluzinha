@@ -1,7 +1,7 @@
-1)a) Estrutra de repetição: contador = 0
-while contador < 21:
-    print(contador)
-    contador += 1
+1)a) Estrutra de repetição: for i in range(12):
+    if i % 2 == 0:
+        continue
+    print(i)
 
 b) x = 10
 if x > 7:
