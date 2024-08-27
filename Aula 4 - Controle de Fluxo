@@ -7,3 +7,5 @@ b) x = 10
 if x > 7:
     print("x é maior que 7")
 
+Execução da estrutura de repetição: https://github.com/Sthefany-Salu/Saluzinha/blob/main/Estrutura%20de%20repeti%C3%A7%C3%A3o.PNG
+Execução de estrutura de tomada de decisão: 
