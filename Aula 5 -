@@ -1,0 +1,35 @@
+1) def bubble_sort(arr):
+    n = len(arr)
+    # Percorre todos os elementos da lista
+    for i in range(n):
+        # Últimos i elementos já estão na posição correta
+        for j in range(0, n-i-1):
+            # Troca se o elemento encontrado for maior que o próximo elemento
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+# Exemplo de uso
+lista = [64, 34, 25, 12, 22, 11, 90]
+print("Lista antes da ordenação:", lista)
+sorted_list = bubble_sort(lista)
+print("Lista após a ordenação:", sorted_list)
+
+b) 
+
+2) def imprimir_vogais(texto):
+    # Defina um conjunto de vogais (considera maiúsculas e minúsculas)
+    vogais = 'aeiouAEIOU'
+    
+    # Filtra e coleta apenas as vogais
+    resultado = [caractere for caractere in texto if caractere in vogais]
+    
+    # Imprime as vogais
+    print("".join(resultado))
+
+# Exemplo de uso
+frase = "Olá, como você está hoje?"
+print("Vogais na frase:", end=" ")
+imprimir_vogais(frase)
+
+b) 
