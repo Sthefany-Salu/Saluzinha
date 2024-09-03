@@ -32,4 +32,4 @@ frase = "Olá, como você está hoje?"
 print("Vogais na frase:", end=" ")
 imprimir_vogais(frase)
 
-b) 
+b) https://github.com/Sthefany-Salu/Saluzinha/blob/main/Algor%C3%ADtimo%20que%20imprime%20apenas%20as%20vogais.PNG
