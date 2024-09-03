@@ -15,7 +15,7 @@ print("Lista antes da ordenação:", lista)
 sorted_list = bubble_sort(lista)
 print("Lista após a ordenação:", sorted_list)
 
-b) 
+b) https://github.com/Sthefany-Salu/Saluzinha/blob/main/Algoritmo%20de%20ordena%C3%A7%C3%A3o%20Bubble%20Sort.PNG
 
 2) def imprimir_vogais(texto):
     # Defina um conjunto de vogais (considera maiúsculas e minúsculas)
