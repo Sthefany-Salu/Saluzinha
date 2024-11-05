@@ -1,0 +1,181 @@
+def carregar_dados():
+    """Carrega os dados diretamente em uma lista de registros."""
+    registros = [
+        {'nome': 'João Silva', 'numero': '1', 'despesa': 1200, 'receita': 3500},
+        {'nome': 'Maria Oliveira', 'numero': '2', 'despesa': 800, 'receita': 2300},
+        {'nome': 'Carlos Pereira', 'numero': '3', 'despesa': 1500, 'receita': 4200},
+        {'nome': 'Ana Souza', 'numero': '4', 'despesa': 600, 'receita': 2100},
+        {'nome': 'Pedro Lima', 'numero': '5', 'despesa': 1000, 'receita': 3000},
+        {'nome': 'Mariana Costa', 'numero': '6', 'despesa': 1800, 'receita': 4700},
+        {'nome': 'Fernanda Santos', 'numero': '7', 'despesa': 750, 'receita': 2600},
+        {'nome': 'Ricardo Alves', 'numero': '8', 'despesa': 950, 'receita': 3200},
+        {'nome': 'Beatriz Ferreira', 'numero': '9', 'despesa': 1400, 'receita': 4000},
+        {'nome': 'Lucas Mendes', 'numero': '10', 'despesa': 900, 'receita': 2900},
+        {'nome': 'Paula Rodrigues', 'numero': '11', 'despesa': 500, 'receita': 1700},
+        {'nome': 'Marcos Souza', 'numero': '12', 'despesa': 2200, 'receita': 5100},
+        {'nome': 'Carolina Batista', 'numero': '13', 'despesa': 1100, 'receita': 3400},
+        {'nome': 'Bruna Rocha', 'numero': '14', 'despesa': 1600, 'receita': 4500},
+        {'nome': 'Felipe Duarte', 'numero': '15', 'despesa': 700, 'receita': 2500},
+        {'nome': 'Mateus Albuquerque', 'numero': '16', 'despesa': 850, 'receita': 2700},
+        {'nome': 'Eduardo Gomes', 'numero': '17', 'despesa': 1700, 'receita': 4600},
+        {'nome': 'Paula Rodrigues', 'numero': '18', 'despesa': 950, 'receita': 2800},
+        {'nome': 'Roberto Lima', 'numero': '19', 'despesa': 2100, 'receita': 5200},
+        {'nome': 'Cíntia Carvalho', 'numero': '20', 'despesa': 650, 'receita': 2100},
+        {'nome': 'Luiz Henrique', 'numero': '21', 'despesa': 1300, 'receita': 3900},
+        {'nome': 'Débora Farias', 'numero': '22', 'despesa': 1000, 'receita': 3100},
+        {'nome': 'Rafael Barbosa', 'numero': '23', 'despesa': 1950, 'receita': 4800},
+        {'nome': 'Silvana Macedo', 'numero': '24', 'despesa': 850, 'receita': 2400},
+        {'nome': 'Gustavo Menezes', 'numero': '25', 'despesa': 1050, 'receita': 3100},
+        {'nome': 'Paula Rodrigues', 'numero': '26', 'despesa': 1200, 'receita': 3600},
+        {'nome': 'Vinícius Rocha', 'numero': '27', 'despesa': 550, 'receita': 1800},
+        {'nome': 'Tatiane Borges', 'numero': '28', 'despesa': 1750, 'receita': 4300},
+        {'nome': 'Flávio Matos', 'numero': '29', 'despesa': 950, 'receita': 3000},
+        {'nome': 'Renata Freitas', 'numero': '30', 'despesa': 800, 'receita': 2600},
+        {'nome': 'Daniela Nunes', 'numero': '31', 'despesa': 1450, 'receita': 4100},
+        {'nome': 'Hugo Oliveira', 'numero': '32', 'despesa': 2300, 'receita': 5400},
+        {'nome': 'Renato Soares', 'numero': '33', 'despesa': 1100, 'receita': 3500},
+        {'nome': 'Camila Martins', 'numero': '34', 'despesa': 1850, 'receita': 4900},
+        {'nome': 'Fabiana Neves', 'numero': '35', 'despesa': 750, 'receita': 2600},
+        {'nome': 'Sandro Ribeiro', 'numero': '36', 'despesa': 900, 'receita': 2700},
+        {'nome': 'Priscila Souza', 'numero': '37', 'despesa': 1600, 'receita': 4400},
+        {'nome': 'Thiago Vasconcelos', 'numero': '38', 'despesa': 1150, 'receita': 3200},
+        {'nome': 'Lorena Medeiros', 'numero': '39', 'despesa': 1300, 'receita': 3600},
+        {'nome': 'André Fernandes', 'numero': '40', 'despesa': 600, 'receita': 2000},
+        {'nome': 'Nathalia Brito', 'numero': '41', 'despesa': 1200, 'receita': 3700},
+        {'nome': 'José Almeida', 'numero': '42', 'despesa': 950, 'receita': 3100}
+    ]
+    return registros
+
+
+def exibir_menu():
+    """Exibe o menu para o usuário."""
+    print("\nMenu de Opções:")
+    print("1. Buscar clientes por parte do nome")
+    print("2. Buscar números de casos de um cliente")
+    print("3. Consultar detalhes de um caso")
+    print("4. Exibir despesa total")
+    print("5. Exibir receita total")
+    print("6. Caso com maior despesa")
+    print("7. Caso com maior receita")
+    print("8. Gerar relatório de cliente")
+    print("0. Sair")
+
+
+def buscar_clientes_por_nome(registros, parte_nome):
+    """Exibe os nomes dos clientes que contêm o texto informado (sem repetição)."""
+    clientes = {r['nome'] for r in registros if parte_nome.lower() in r['nome'].lower()}
+    for cliente in clientes:
+        print(cliente)
+
+
+def buscar_numeros_casos(registros, nome_cliente):
+    """Exibe os números dos casos associados ao cliente."""
+    casos = [r['numero'] for r in registros if r['nome'].lower() == nome_cliente.lower()]
+    if casos:
+        print("Casos associados a", nome_cliente + ":", ", ".join(casos))
+    else:
+        print(f"Não há casos registrados para o cliente {nome_cliente}.")
+
+
+def consultar_caso(registros, numero_caso):
+    """Exibe os detalhes de um caso específico."""
+    for r in registros:
+        if r['numero'] == numero_caso:
+            diferenca = r['receita'] - r['despesa']
+            print(f"Cliente: {r['nome']}")
+            print(f"Número do caso: {r['numero']}")
+            print(f"Despesa: R${r['despesa']:.2f}")
+            print(f"Receita: R${r['receita']:.2f}")
+            print(f"Diferença (Receita - Despesa): R${diferenca:.2f}")
+            return
+    print("Caso não encontrado.")
+
+
+def exibir_despesa_total(registros):
+    """Exibe o total de despesas de todos os casos."""
+    total_despesa = sum(r['despesa'] for r in registros)
+    print(f"Despesa total: R${total_despesa:.2f}")
+
+
+def exibir_receita_total(registros):
+    """Exibe o total de receitas de todos os casos."""
+    total_receita = sum(r['receita'] for r in registros)
+    print(f"Receita total: R${total_receita:.2f}")
+
+
+def caso_com_maior_despesa(registros):
+    """Exibe o caso com a maior despesa."""
+    caso = max(registros, key=lambda r: r['despesa'])
+    print(f"Caso com maior despesa:")
+    print(f"Cliente: {caso['nome']}, Número: {caso['numero']}, Despesa: R${caso['despesa']:.2f}, Receita: R${caso['receita']:.2f}")
+
+
+def caso_com_maior_receita(registros):
+    """Exibe o caso com a maior receita."""
+    caso = max(registros, key=lambda r: r['receita'])
+    print(f"Caso com maior receita:")
+    print(f"Cliente: {caso['nome']}, Número: {caso['numero']}, Despesa: R${caso['despesa']:.2f}, Receita: R${caso['receita']:.2f}")
+
+
+def gerar_relatorio_cliente(registros, nome_cliente):
+    """Gera um arquivo com o relatório de um cliente."""
+    casos_cliente = [r for r in registros if r['nome'].lower() == nome_cliente.lower()]
+    if casos_cliente:
+        total_despesa = sum(c['despesa'] for c in casos_cliente)
+        total_receita = sum(c['receita'] for c in casos_cliente)
+        diferenca_total = total_receita - total_despesa
+
+        with open(f"relatorio_{nome_cliente.replace(' ', '_')}.txt", 'w') as f:
+            f.write(f"Relatório do Cliente: {nome_cliente}\n")
+            f.write(f"{'Número':<10}{'Despesa':<15}{'Receita':<15}\n")
+            for c in casos_cliente:
+                f.write(f"{c['numero']:<10}{c['despesa']:<15.2f}{c['receita']:<15.2f}\n")
+            f.write(f"\nDespesa total: R${total_despesa:.2f}")
+            f.write(f"\nReceita total: R${total_receita:.2f}")
+            f.write(f"\nDiferença (Receita - Despesa): R${diferenca_total:.2f}")
+
+
+# Função principal
+def main():
+    registros = carregar_dados()
+    while True:
+        exibir_menu()
+        opcao = input("Escolha uma opção: ")
+        
+        if opcao == '1':
+            parte_nome = input("Informe a parte do nome do cliente: ")
+            buscar_clientes_por_nome(registros, parte_nome)
+        
+        elif opcao == '2':
+            nome_cliente = input("Informe o nome completo do cliente: ")
+            buscar_numeros_casos(registros, nome_cliente)
+        
+        elif opcao == '3':
+            numero_caso = input("Informe o número do caso: ")
+            consultar_caso(registros, numero_caso)
+        
+        elif opcao == '4':
+            exibir_despesa_total(registros)
+        
+        elif opcao == '5':
+            exibir_receita_total(registros)
+        
+        elif opcao == '6':
+            caso_com_maior_despesa(registros)
+        
+        elif opcao == '7':
+            caso_com_maior_receita(registros)
+        
+        elif opcao == '8':
+            nome_cliente = input("Informe o nome completo do cliente para gerar o relatório: ")
+            gerar_relatorio_cliente(registros, nome_cliente)
+        
+        elif opcao == '0':
+            print("Saindo do programa.")
+            break
+
+        else:
+            print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
